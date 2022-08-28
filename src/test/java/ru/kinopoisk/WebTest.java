@@ -25,6 +25,7 @@ public class WebTest {
         $(".element.most_wanted").shouldHave(text(testData + " (сериал)"));
     }
 
+
     //Use @CsvSource
     @CsvSource(value = {
             "Друзья, 1994 – 2004",
@@ -38,6 +39,7 @@ public class WebTest {
         $(".element.most_wanted").shouldHave(text(expectedResult));
     }
 
+    //Use @MethodSource
     static Stream<Arguments> genreMatchesTest() {
         return Stream.of(
                 Arguments.of("Друзья", List.of("комедия", "мелодрама")),
