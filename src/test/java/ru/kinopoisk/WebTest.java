@@ -48,6 +48,7 @@ public class WebTest {
         );
     }
 
+    //Use @MethodSource
     @MethodSource("genreMatchesTest")
     @ParameterizedTest(name = " Страница сериала - \"{0}\" содержит жанры \"{1}\"")
     void genreMatchesTheResultTest(String testData, List<String> expectedGenre) {
